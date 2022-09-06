@@ -1,7 +1,7 @@
 from alpine:latest
 
-RUN apk add --no-cache python3-dev\
-	&& pip3 install --upgrade pip
+RUN apk add --no-cache python3-dev\ && apk add py3-pip\
+	&& python3 -m pip install --upgrade pip
 
 WORKDIR /app
 
